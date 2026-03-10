@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: ancla-encargos
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: LOGO_B64
+        sync: false
